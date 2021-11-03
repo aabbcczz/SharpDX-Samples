@@ -19,6 +19,7 @@
 // THE SOFTWARE.
 
 using System;
+using System.Diagnostics;
 using SharpDX;
 using SharpDX.Direct2D1;
 using SharpDX.DirectWrite;
@@ -57,7 +58,9 @@ namespace SimpleHelloWorld
 
             RenderTarget2D.Clear(Color.White);
 
-            RenderTarget2D.DrawText("Hello World using DirectWrite!", TextFormat, ClientRectangle, SceneColorBrush);
+            //string text = "Hello World using DirectWrite!";
+            string text = Stopwatch.GetTimestamp().ToString();
+            RenderTarget2D.DrawText(text, TextFormat, ClientRectangle, SceneColorBrush);
         }
 
         /// <summary>

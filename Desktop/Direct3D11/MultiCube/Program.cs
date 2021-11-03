@@ -127,7 +127,7 @@ namespace MultiCube
             var contextPerThread = new DeviceContext[MaxNumberOfThreads];
             contextPerThread[0] = immediateContext;
             var commandLists = new CommandList[MaxNumberOfThreads];
-            CommandList[] frozenCommandLists = null;
+            //CommandList[] frozenCommandLists = null;
 
             // Check if driver is supporting natively CommandList
             bool supportConcurentResources;
